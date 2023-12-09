@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_local_simple"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.LocalSimpleFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:text="ID:"
+            android:id="@+id/tv_local_id"/>
+
+        <EditText
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/tv_local_id"
+            android:layout_toEndOf="@+id/tv_local_id"
+            android:textSize="14sp"
+            android:id="@+id/et_local_id"/>
+
+        <Button
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:drawableTop="@android:drawable/ic_menu_rotate"
+            android:layout_toRightOf="@+id/et_local_id"
+            android:layout_toEndOf="@+id/et_local_id"
+            android:id="@+id/btn_local_id_r"
+            android:background="?attr/selectableItemBackground"/>
+
+        <Button
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:drawableTop="@android:drawable/ic_menu_send"
+            android:layout_toRightOf="@+id/btn_local_id_r"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/btn_local_id_w"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:text="SC:"
+            android:id="@+id/tv_local_sc"/>
+
+        <EditText
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/tv_local_sc"
+            android:layout_toEndOf="@+id/tv_local_sc"
+            android:textSize="14sp"
+            android:id="@+id/et_local_sc"/>
+
+        <Button
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:drawableTop="@android:drawable/ic_menu_rotate"
+            android:layout_toRightOf="@+id/et_local_sc"
+            android:layout_toEndOf="@+id/et_local_sc"
+            android:id="@+id/btn_local_sc_r"
+            android:background="?attr/selectableItemBackground"/>
+
+        <Button
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:drawableTop="@android:drawable/ic_menu_send"
+            android:layout_toRightOf="@+id/btn_local_sc_r"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/btn_local_sc_w"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:text="EE:"
+            android:id="@+id/tv_local_ee"/>
+
+        <EditText
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/tv_local_ee"
+            android:layout_toEndOf="@+id/tv_local_ee"
+            android:textSize="14sp"
+            android:id="@+id/et_local_ee"/>
+
+        <Button
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:drawableTop="@android:drawable/ic_menu_rotate"
+            android:layout_toRightOf="@+id/et_local_ee"
+            android:layout_toEndOf="@+id/et_local_ee"
+            android:id="@+id/btn_local_ee_r"
+            android:background="?attr/selectableItemBackground"/>
+
+        <Button
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:drawableTop="@android:drawable/ic_menu_send"
+            android:layout_toRightOf="@+id/btn_local_ee_r"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/btn_local_ee_w"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:text="KY:"
+            android:id="@+id/tv_local_ky"/>
+
+        <EditText
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/tv_local_ky"
+            android:layout_toEndOf="@+id/tv_local_ky"
+            android:textSize="14sp"
+            android:id="@+id/et_local_ky"/>
+
+        <Button
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="35dp"
+            android:drawableTop="@android:drawable/ic_menu_rotate"
+            android:layout_toRightOf="@+id/et_local_ky"
+            android:layout_toEndOf="@+id/et_local_ky"
+            android:id="@+id/btn_local_ky_r"
+            android:background="?attr/selectableItemBackground"/>
+
+        <Button
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="35dp"
+            android:drawableTop="@android:drawable/ic_menu_send"
+            android:layout_toRightOf="@+id/btn_local_ky_r"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/btn_local_ky_w"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

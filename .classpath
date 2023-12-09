@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="appdd/build/generated/source/buildConfig/debug"/>
+	<classpathentry kind="src" path="appdd/src/androidTest/java"/>
+	<classpathentry kind="src" path="appdd/src/test/java"/>
+	<classpathentry kind="src" path="library/build/generated/source/buildConfig/debug"/>
+	<classpathentry kind="src" path="library/src/androidTest/java"/>
+	<classpathentry kind="src" path="library/src/main/java"/>
+	<classpathentry kind="src" path="library/src/test/java"/>
+	<classpathentry kind="src" path="serialhelperlibrary/build/generated/source/buildConfig/debug"/>
+	<classpathentry kind="src" path="serialhelperlibrary/src/main/java"/>
+	<classpathentry kind="src" path="usbSerialForAndroid/build/generated/ap_generated_sources/debug/out"/>
+	<classpathentry kind="src" path="usbSerialForAndroid/build/generated/data_binding_trigger/debug"/>
+	<classpathentry kind="src" path="usbSerialForAndroid/build/generated/source/buildConfig/debug"/>
+	<classpathentry kind="src" path="usbSerialForAndroid/src/androidTest/java"/>
+	<classpathentry kind="src" path="usbSerialForAndroid/src/main/java"/>
+	<classpathentry kind="src" path="usbSerialForAndroid/src/test/java"/>
+	<classpathentry kind="lib" path="gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="library/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar"/>
+	<classpathentry kind="lib" path="library/build/intermediates/compile_app_classes_jar/debug/classes.jar"/>
+	<classpathentry kind="lib" path="library/build/intermediates/runtime_app_classes_jar/debug/classes.jar"/>
+	<classpathentry kind="lib" path="serialhelperlibrary/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar"/>
+	<classpathentry kind="lib" path="serialhelperlibrary/build/intermediates/compile_app_classes_jar/debug/classes.jar"/>
+	<classpathentry kind="lib" path="serialhelperlibrary/build/intermediates/runtime_app_classes_jar/debug/classes.jar"/>
+	<classpathentry kind="lib" path="usbSerialForAndroid/build/intermediates/compile_library_classes_jar/debug/classes.jar"/>
+	<classpathentry kind="lib" path="usbSerialForAndroid/build/intermediates/compile_r_class_jar/debug/R.jar"/>
+	<classpathentry kind="lib" path="usbSerialForAndroid/build/intermediates/data_binding_export_class_list/debug/out.jar"/>
+	<classpathentry kind="lib" path="usbSerialForAndroid/build/intermediates/runtime_library_classes_jar/debug/classes.jar"/>
+	<classpathentry kind="output" path="library/build/intermediates/javac/debug/classes"/>
+</classpath>

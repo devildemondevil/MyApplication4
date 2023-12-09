@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="remote_basic_alarm_enable_array">
+        <item>"关闭"</item>
+        <item>"打开"</item>
+    </string-array>
+
+    <string-array name="remote_basic_stop_check_enable_array">
+        <item>"关闭"</item>
+        <item>"打开"</item>
+    </string-array>
+
+    <string-array name="remote_extern_encrypt_enable_array">
+        <item>"不加密"</item>
+        <item>"加密"</item>
+    </string-array>
+
+    <string-array name="remote_extern_encrypt_opt_array">
+        <item>"在入网期间 获取/发送 安全密钥"</item>
+        <item>"使用"信用中心""</item>
+    </string-array>
+
+</resources>
