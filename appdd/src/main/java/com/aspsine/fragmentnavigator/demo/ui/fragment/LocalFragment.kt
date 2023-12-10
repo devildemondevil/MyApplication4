@@ -13,7 +13,6 @@ import com.aspsine.fragmentnavigator.FragmentNavigator
 import com.aspsine.fragmentnavigator.demo.R
 import com.aspsine.fragmentnavigator.demo.ui.adapter.ChildRemoteFragmentAdapter
 import com.aspsine.fragmentnavigator.demo.ui.widget.LocalTabLayout
-import kotlinx.android.synthetic.main.fragment_local.view.*
 import org.w3c.dom.Text
 
 

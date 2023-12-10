@@ -16,7 +16,6 @@ import com.aspsine.fragmentnavigator.demo.protocols.ProtocolHandler
 import com.aspsine.fragmentnavigator.demo.protocols.zigbee.FrameData.ApiZigbeeATCmdAndQpPacket
 import com.aspsine.fragmentnavigator.demo.protocols.zigbee.FrameData.ApiZigbeeATCmdRespPacket
 import com.google.android.material.snackbar.Snackbar
-import com.swallowsonny.convertextlibrary.toHexString
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -92,7 +91,7 @@ class LocalSimpleFragment : Fragment() {
             packet.frameId = 0x01
             packet.atCmd = "ID"
             var atcmdArray = __protocolHandler.apiZigbeeATCmdPacket.encoding(packet)
-            Log.i(tagApp,"ID:${atcmdArray.toHexString()}")
+//            Log.i(tagApp,"ID:${atcmdArray.toHexString()}")
 
             EventBus.getDefault().post(
                 MessageZigBeeFrameEvent(
@@ -114,7 +113,7 @@ class LocalSimpleFragment : Fragment() {
             }
 
             var atcmdArray = __protocolHandler.apiZigbeeATCmdPacket.encoding(packet)
-            Log.i(tagApp,"ID:${atcmdArray.toHexString()}")
+//            Log.i(tagApp,"ID:${atcmdArray.toHexString()}")
 
             EventBus.getDefault().post(
                 MessageZigBeeFrameEvent(
@@ -131,7 +130,7 @@ class LocalSimpleFragment : Fragment() {
             packet.frameId = 0x01
             packet.atCmd = "SC"
             var atcmdArray = __protocolHandler.apiZigbeeATCmdPacket.encoding(packet)
-            Log.i(tagApp,"SC:${atcmdArray.toHexString()}")
+//            Log.i(tagApp,"SC:${atcmdArray.toHexString()}")
 
             EventBus.getDefault().post(
                 MessageZigBeeFrameEvent(
@@ -153,7 +152,7 @@ class LocalSimpleFragment : Fragment() {
             }
 
             var atcmdArray = __protocolHandler.apiZigbeeATCmdPacket.encoding(packet)
-            Log.i(tagApp,"SC:${atcmdArray.toHexString()}")
+//            Log.i(tagApp,"SC:${atcmdArray.toHexString()}")
 
             EventBus.getDefault().post(
                 MessageZigBeeFrameEvent(
@@ -169,7 +168,7 @@ class LocalSimpleFragment : Fragment() {
             packet.frameId = 0x01
             packet.atCmd = "EE"
             var atcmdArray = __protocolHandler.apiZigbeeATCmdPacket.encoding(packet)
-            Log.i(tagApp,"EE:${atcmdArray.toHexString()}")
+//            Log.i(tagApp,"EE:${atcmdArray.toHexString()}")
 
             EventBus.getDefault().post(
                 MessageZigBeeFrameEvent(
@@ -203,12 +202,12 @@ class LocalSimpleFragment : Fragment() {
                     array[0] = ee.toByte()
                 }
 
-                Log.i(tagApp,"EE:${array.toHexString()}")
+//                Log.i(tagApp,"EE:${array.toHexString()}")
                 packet.parasValues = array
             }
 
             var atcmdArray = __protocolHandler.apiZigbeeATCmdPacket.encoding(packet)
-            Log.i(tagApp,"EE:${atcmdArray.toHexString()}")
+//            Log.i(tagApp,"EE:${atcmdArray.toHexString()}")
 
             EventBus.getDefault().post(
                 MessageZigBeeFrameEvent(
@@ -224,7 +223,7 @@ class LocalSimpleFragment : Fragment() {
             packet.frameId = 0x01
             packet.atCmd = "KY"
             var atcmdArray = __protocolHandler.apiZigbeeATCmdPacket.encoding(packet)
-            Log.i(tagApp,"KY:${atcmdArray.toHexString()}")
+//            Log.i(tagApp,"KY:${atcmdArray.toHexString()}")
 
             EventBus.getDefault().post(
                 MessageZigBeeFrameEvent(
@@ -245,7 +244,7 @@ class LocalSimpleFragment : Fragment() {
             }
 
             var atcmdArray = __protocolHandler.apiZigbeeATCmdPacket.encoding(packet)
-            Log.i(tagApp,"KY:${atcmdArray.toHexString()}")
+//            Log.i(tagApp,"KY:${atcmdArray.toHexString()}")
 
             EventBus.getDefault().post(
                 MessageZigBeeFrameEvent(
@@ -295,14 +294,14 @@ class LocalSimpleFragment : Fragment() {
 
                         }
                         cmdSC ->{
-                            edtSc.text = Editable.Factory.getInstance().newEditable(it.cmdData.toHexString(false))
+//                            edtSc.text = Editable.Factory.getInstance().newEditable(it.cmdData.toHexString(false))
 
                         }
                         cmdEE ->{
-                           edtEe.text  = Editable.Factory.getInstance().newEditable(it.cmdData.toHexString())
+//                           edtEe.text  = Editable.Factory.getInstance().newEditable(it.cmdData.toHexString())
                         }
                         cmdKY ->{
-                            edtKy.text  = Editable.Factory.getInstance().newEditable(it.cmdData.toHexString(false))
+//                            edtKy.text  = Editable.Factory.getInstance().newEditable(it.cmdData.toHexString(false))
                         }
                         else -> return
                     }
@@ -321,7 +320,7 @@ class LocalSimpleFragment : Fragment() {
                             packet.frameId = 0x01
                             packet.atCmd = "WR"
                             var atcmdArray = __protocolHandler.apiZigbeeATCmdPacket.encoding(packet)
-                            Log.i(tagApp,"WR:${atcmdArray.toHexString()}")
+//                            Log.i(tagApp,"WR:${atcmdArray.toHexString()}")
 
                             EventBus.getDefault().post(
                                 MessageZigBeeFrameEvent(
@@ -341,7 +340,7 @@ class LocalSimpleFragment : Fragment() {
                             packet.frameId = 0x01
                             packet.atCmd = "AC"
                             var atcmdArray = __protocolHandler.apiZigbeeATCmdPacket.encoding(packet)
-                            Log.i(tagApp,"AC:${atcmdArray.toHexString()}")
+//                            Log.i(tagApp,"AC:${atcmdArray.toHexString()}")
 
                             EventBus.getDefault().post(
                                 MessageZigBeeFrameEvent(

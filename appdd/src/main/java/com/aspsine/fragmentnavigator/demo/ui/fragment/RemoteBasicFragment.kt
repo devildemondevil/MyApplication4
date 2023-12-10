@@ -26,6 +26,8 @@ import java.text.SimpleDateFormat
 import kotlin.experimental.or
 
 
+
+
 /**
  * A simple [Fragment] subclass.
  * Use the [RemoteBasicFragment.newInstance] factory method to
@@ -34,6 +36,7 @@ import kotlin.experimental.or
 class RemoteBasicFragment : Fragment() {
 
     var tagApp = "FragmentNavigator"
+
     var __protocolHandler: ProtocolHandler = ProtocolHandler()
 
     var rawPacket__ = McfgBasicParaRWPacket()
@@ -51,12 +54,19 @@ class RemoteBasicFragment : Fragment() {
     lateinit var edtBatteryData : EditText
     lateinit var edtUseDate : EditText
     lateinit var spAlarm : Spinner
+
     lateinit var edtAlarmDeadband : EditText
+
     lateinit var edtALarmHigh : EditText
+
     lateinit var edtAlarmLow : EditText
+
     lateinit var spStopCheck : Spinner
+
     lateinit var cbArmOrLen : CheckBox
+
     lateinit var edtArmLen : EditText
+
     lateinit var edtSoftState : EditText
 
 
@@ -79,15 +89,22 @@ class RemoteBasicFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_remote_basic, container, false)
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         edtPanId = view.findViewById(R.id.et_basic_pan_id)
+
         edtChannel = view.findViewById(R.id.et_basic_channel)
+
         edtDeviceGroup = view.findViewById(R.id.et_basic_device_group)
+
         edtDeviceSN = view.findViewById(R.id.et_basic_device_sn)
+
         edtSleepTime = view.findViewById(R.id.et_basic_sleep_time)
+
         tvFirmwareVer = view.findViewById(R.id.tv_basic_firmware_version)
+
         edtPosition = view.findViewById(R.id.et_basic_position)
         edtBatteryData = view.findViewById(R.id.et_basic_batte_data)
         edtUseDate = view.findViewById(R.id.et_basic_use_date)
@@ -157,6 +174,7 @@ class RemoteBasicFragment : Fragment() {
                 }
                 //参数设置返回
                 MCFGCtHeaderCmdType.BasicParamWrite -> activity?.let { Snackbar.make(it.findViewById(R.id.fragment_remote_basic),"写基本参数成功",Snackbar.LENGTH_SHORT).show() }
+                else -> {}
             }
 
         }
@@ -165,8 +183,11 @@ class RemoteBasicFragment : Fragment() {
     private fun updateUi(mcfgBasicParaRWPacket: McfgBasicParaRWPacket){
 
         var positionRaw = mcfgBasicParaRWPacket.positionInfo.readStringBE(0,20,"ascii").trim().trimEnd { it <=' ' }
+
         Log.i(tagApp,"position raw:${positionRaw.toByteArray().toHexString()}")
+
         edtPosition.text = Editable.Factory.getInstance().newEditable(positionRaw)
+
         Log.i(tagApp,"position:${mcfgBasicParaRWPacket.positionInfo.toHexString()}")
 
 
@@ -179,6 +200,7 @@ class RemoteBasicFragment : Fragment() {
         edtDeviceSN.text = Editable.Factory.getInstance().newEditable(mcfgBasicParaRWPacket.devNum.toInt().and(0xFF).toString())
 
         var alarmEnableIndex = mcfgBasicParaRWPacket.alarmEnable.toInt().and(0xFF)
+
         if(alarmEnableIndex < resources.getStringArray(R.array.remote_basic_alarm_enable_array).size){
             spAlarm.setSelection(alarmEnableIndex)
         }
@@ -194,6 +216,7 @@ class RemoteBasicFragment : Fragment() {
         edtAlarmDeadband.text = Editable.Factory.getInstance().newEditable(mcfgBasicParaRWPacket.alarmDeadband.and(0xFFFF).toString())
 
         edtBatteryData.text = Editable.Factory.getInstance().newEditable(bcdTime2String(mcfgBasicParaRWPacket.batteryData))
+
         Log.i(tag,"edtBatteryData : ${mcfgBasicParaRWPacket.batteryData.toHexString()}")
 
         edtUseDate.text = Editable.Factory.getInstance().newEditable(bcdTime2String(mcfgBasicParaRWPacket.useDate))
@@ -321,7 +344,7 @@ class RemoteBasicFragment : Fragment() {
 //            false
 //        }
         var armOrLenValue  : Byte = try{
-            (edtArmLen.text.toString().toFloat() * 10).toByte()
+            (edtArmLen.text.toString().toFloat() * 10).toInt().toByte()
         }catch (ex :NumberFormatException ){
             0x00
         }

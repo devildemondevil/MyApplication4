@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity
 //import androidx.navigation.fragment.FragmentNavigator
 import androidx.fragment.app.FragmentManager;
 //import androidx.navigation.fragment.FragmentNavigator;
-import androidx.navigation.fragment.NavHostFragment;
+//import androidx.navigation.fragment.NavHostFragment;
 import com.aspsine.fragmentnavigator.FragmentNavigator
 import com.aspsine.fragmentnavigator.demo.*
 import com.aspsine.fragmentnavigator.demo.broadcast.BroadcastManager

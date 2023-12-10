@@ -1,6 +1,6 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    id("com.android.library")  version "8.0.0"
+    id("org.jetbrains.kotlin.android") version "1.7.20"
 }
 
 android {
@@ -8,11 +8,10 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.aspsine.fragmentnavigator"
+//        applicationId = "com.aspsine.fragmentnavigator"
         minSdk = 24
         targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
+//        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -38,9 +37,10 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig=true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = "1.3.2"
     }
     packaging {
         resources {

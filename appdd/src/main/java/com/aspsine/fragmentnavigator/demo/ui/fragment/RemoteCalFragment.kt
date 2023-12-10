@@ -201,6 +201,8 @@ class RemoteCalFragment : Fragment() {
                     Snackbar.make(it.findViewById(R.id.fragment_remote_cal)
                         ,"写校准参数成功"
                         , Snackbar.LENGTH_SHORT).show() }
+
+                else -> {}
             }
 
         }

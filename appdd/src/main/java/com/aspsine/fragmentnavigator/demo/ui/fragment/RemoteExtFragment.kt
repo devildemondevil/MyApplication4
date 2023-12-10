@@ -124,6 +124,7 @@ class RemoteExtFragment : Fragment() {
                 }
                 //参数设置返回
                 MCFGCtHeaderCmdType.ExtendParamWrite -> activity?.let { Snackbar.make(it.findViewById(R.id.fragment_remote_ext),"写扩展参数成功",Snackbar.LENGTH_SHORT).show() }
+                else -> {}
             }
 
         }
