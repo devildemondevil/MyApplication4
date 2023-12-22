@@ -26,7 +26,7 @@ android {
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-//    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22")
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.7.20"))
 }
 
 repositories {

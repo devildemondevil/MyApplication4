@@ -71,7 +71,7 @@ enum class ApiFrameType(override var value: Int): HasValue<Int> {
 
 
 
-class ProtocolHandler {
+open class ProtocolHandler {
 
     //zigbee包
     open var zigBeePacketHandler = ZigBeePacketHandler()

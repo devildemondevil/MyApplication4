@@ -14,7 +14,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "My Application"
-include(":app")
 include(":library")
 include(":appdd")
 include(":serialhelperlibrary")

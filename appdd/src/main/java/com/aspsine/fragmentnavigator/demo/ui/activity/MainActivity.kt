@@ -76,33 +76,38 @@ class MainActivity : AppCompatActivity(), OnBottomNavigatorViewItemClickListener
     var __protocolHandler: ProtocolHandler = ProtocolHandler()
 
     //界面更新 handler
-    private val handler = Handler(){
-        when(it.what){
-            0x01 ->{//USB
-                var objPair : Pair<Int,String> = it.obj as Pair<Int, String>
-                if(objPair.first == 5){
-                    Toast.makeText(baseContext,objPair.second,Toast.LENGTH_SHORT).show()
-                }else if(objPair.first in 6..7){
+    private val handler = Handler() {m->
+
+        when (m.what) {
+            0x01 -> {//USB
+                var objPair: Pair<Int, String> = m.obj as Pair<Int, String>
+                if (objPair.first == 5) {
+                    Toast.makeText(baseContext, objPair.second, Toast.LENGTH_SHORT).show()
+                } else if (objPair.first in 6..7) {
                     __disCfgMenu?.isVisible = false
                     __connPairStep = 0
-                    Toast.makeText(baseContext,objPair.second,Toast.LENGTH_SHORT).show()
+                    Toast.makeText(baseContext, objPair.second, Toast.LENGTH_SHORT).show()
                 }
             }
-            0x02 ->{//zigbee设备是否连接
-                var objInt :Int = it.obj as Int
-                if(objInt == 1){//有设备接入
-                    Toast.makeText(baseContext,"有设备请求接入",Toast.LENGTH_SHORT).show()
-                } else if(objInt == 5){//连接成功
+
+            0x02 -> {//zigbee设备是否连接
+                var objInt: Int = m.obj as Int
+                if (objInt == 1) {//有设备接入
+                    Toast.makeText(baseContext, "有设备请求接入", Toast.LENGTH_SHORT).show()
+                } else if (objInt == 5) {//连接成功
                     __disCfgMenu?.isVisible = true
-                    Toast.makeText(baseContext,"设备接入成功",Toast.LENGTH_LONG).show()
+                    Toast.makeText(baseContext, "设备接入成功", Toast.LENGTH_LONG).show()
                 }
             }
         }
 
-        true
+        return@Handler true
     }
 
-    private var mNavigator: com.aspsine.fragmentnavigator.FragmentNavigator? = null// 底部导航
+
+
+
+    private var mNavigator: FragmentNavigator? = null// 底部导航
     private var bottomNavigatorView: BottomNavigatorView? = null
 
     private var mLoginMenu: MenuItem? = null
@@ -120,7 +125,6 @@ class MainActivity : AppCompatActivity(), OnBottomNavigatorViewItemClickListener
 
         //EventBus 注册
         EventBus.getDefault().register(this)
-
         mNavigator = FragmentNavigator(supportFragmentManager, FragmentAdapter(), R.id.container)
         mNavigator!!.setDefaultPosition(DEFAULT_POSITION)
         mNavigator!!.onCreate(savedInstanceState)

@@ -40,7 +40,7 @@ android {
         buildConfig=true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.2"
+        kotlinCompilerExtensionVersion = "1.4.0-alpha01"
     }
     packaging {
         resources {
@@ -52,4 +52,5 @@ android {
 dependencies {
     testImplementation ("junit:junit:4.13.2")
     implementation ("androidx.fragment:fragment:1.6.2")
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.7.20"))
 }

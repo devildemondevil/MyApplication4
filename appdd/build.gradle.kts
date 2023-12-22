@@ -19,7 +19,9 @@ android {
             useSupportLibrary = true
         }
     }
-
+    buildFeatures{
+        dataBinding =true
+    }
     buildTypes {
 
         release {
@@ -56,10 +58,16 @@ dependencies {
 //    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
 //    implementation("androidx.appcompat:appcompat:1.6.1")
 //    implementation("androidx.localbroadcastmanager:localbroadcastmanager:1.1.0")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.20")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.7.20"){
+        exclude(group = "kotlin.internal.jdk7", module = "JDK7PlatformImplementations")
+        exclude(group = "kotlin.internal.jdk8", module = "JDK8PlatformImplementations")
+        // 其他需要排除的类
+    }
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.7.20"))
+
 //    implementation("androidx.activity:activity-compose:1.7.2")
 //    implementation("androidx.compose.ui:ui")
-    implementation(project(":convertextlibrary"))
+//    implementation(project(":convertextlibrary"))
 //    implementation("androidx.compose.ui:ui-graphics")
 //    implementation("androidx.compose.ui:ui-tooling-preview")
 //    implementation("androidx.compose.material3:material3")
@@ -67,13 +75,13 @@ dependencies {
 //    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
 //    debugImplementation("androidx.compose.ui:ui-tooling")
 //    debugImplementation("androidx.compose.ui:ui-test-manifest")
-    implementation(project(":library"))
-    implementation(project(":usbSerialForAndroid"))
+//    implementation(project(":library"))
+//    implementation(project(":usbSerialForAndroid"))
 //
     implementation ("androidx.compose.ui:ui:1.4.0-alpha01")
     implementation ("androidx.compose.compiler:compiler:1.4.0-alpha01" )// 将版本号更改为支持 Kotlin 1.7.20 的版本
 
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20")
     implementation ("org.greenrobot:eventbus:3.2.0") // 使用最新版本号
 
     implementation("androidx.appcompat:appcompat:1.6.1")

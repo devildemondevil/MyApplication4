@@ -72,7 +72,7 @@ class BottomNavigatorView @JvmOverloads constructor(
         for (i in 0 until childCount) {
             val view = getChildAt(i)
             view.setOnClickListener { v ->
-                mOnBottomNavigatorViewItemClickListener!!.onBottomNavigatorViewItemClick(
+                mOnBottomNavigatorViewItemClickListener?.onBottomNavigatorViewItemClick(
                     i,
                     v
                 )

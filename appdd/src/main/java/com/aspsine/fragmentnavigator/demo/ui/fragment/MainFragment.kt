@@ -24,7 +24,7 @@ class MainFragment : Fragment() {
     private val MOCK_LOAD_DATA_DELAYED_TIME : Long = 100
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mText = arguments!!.getString(EXTRA_TEXT)
+        mText = requireArguments().getString(EXTRA_TEXT)
     }
 
     override fun onCreateView(

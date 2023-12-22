@@ -40,7 +40,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = "1.4.0-alpha01"
     }
     packaging {
         resources {
@@ -52,5 +52,6 @@ android {
 dependencies {
     implementation(project(":usbSerialForAndroid"))
     implementation ("androidx.compose.ui:ui:1.4.0")
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.7.20"))
     testImplementation ("junit:junit:4.13.2")
 }
